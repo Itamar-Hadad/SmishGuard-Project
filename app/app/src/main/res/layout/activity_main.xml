@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/md_theme_background"
+    tools:context=".MainActivity">
+
+    <!-- TopAppBar with Backdrop Blur Effect -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@drawable/toolbar_background"
+            android:elevation="0dp"
+            app:titleTextAppearance="@style/TextAppearance.App.Headline"
+            app:layout_scrollFlags="scroll|enterAlways">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_gravity="start">
+
+                <ImageView
+                    android:id="@+id/logoIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_shield"
+                    android:tint="@color/md_theme_primary"
+                    android:contentDescription="App logo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/app_name"
+                    android:textAllCaps="true"
+                    android:textColor="@color/md_theme_primary"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:letterSpacing="0.1" />
+            </LinearLayout>
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Scrollable Content -->
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="80dp"
+        android:paddingStart="@dimen/spacing_safe_margin"
+        android:paddingEnd="@dimen/spacing_safe_margin"
+        android:paddingBottom="100dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/spacing_xl">
+
+            <!-- Guard Card: Real-time Protection Toggle -->
+            <FrameLayout
+                android:id="@+id/guardCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xl"
+                android:background="@drawable/guard_card_new"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <!-- Shield Icon with Glow -->
+                    <FrameLayout
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="12dp">
+
+                        <View
+                            android:id="@+id/shieldGlow"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shield_glow_new"
+                            android:alpha="0.5" />
+
+                        <FrameLayout
+                            android:id="@+id/shieldCircle"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/shield_circle_background">
+
+                            <ImageView
+                                android:id="@+id/ivShieldIcon"
+                                android:layout_width="28dp"
+                                android:layout_height="28dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_verified_user"
+                                android:tint="@color/md_theme_primary" />
+                        </FrameLayout>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/tvActiveShield"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Active Shield"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/md_theme_on_surface"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginBottom="12dp" />
+
+                    <!-- Protection Status Container -->
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/status_container_background"
+                        android:padding="12dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="PROTECTION STATUS"
+                                    android:textSize="12sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/md_theme_on_surface"
+                                    android:letterSpacing="0.05"
+                                    android:fontFamily="sans-serif-medium" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvProtectionStatus"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="ON"
+                                        android:textSize="14sp"
+                                        android:textStyle="bold"
+                                        android:textColor="@color/md_theme_primary"
+                                        android:layout_marginEnd="8dp" />
+
+                                    <FrameLayout
+                                        android:id="@+id/toggleContainer"
+                                        android:layout_width="48dp"
+                                        android:layout_height="24dp"
+                                        android:background="@drawable/toggle_new_active">
+
+                                        <View
+                                            android:id="@+id/toggleThumb"
+                                            android:layout_width="16dp"
+                                            android:layout_height="16dp"
+                                            android:layout_gravity="center_vertical|end"
+                                            android:layout_marginEnd="4dp"
+                                            android:background="@drawable/toggle_thumb_new" />
+                                    </FrameLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/tvActiveSince"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="10sp"
+                                android:textColor="@color/md_theme_on_surface_variant"
+                                android:alpha="0.7"
+                                android:fontFamily="sans-serif-medium" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </FrameLayout>
+
+            <!-- Stats Grid (Bento Style) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Total SMS Scanned -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stat_card_normal"
+                    android:padding="@dimen/spacing_md"
+                    android:layout_marginBottom="@dimen/spacing_md">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="TOTAL SMS SCANNED"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/md_theme_on_surface_variant"
+                                android:letterSpacing="0.05"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_analytics"
+                                android:tint="@color/md_theme_on_surface_variant" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvScanned"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="48sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/md_theme_primary"
+                            android:letterSpacing="-0.04"
+                            android:fontFamily="sans-serif-black" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <!-- Smishing Detected (Alert Style) -->
+                <FrameLayout
+                    android:id="@+id/alertCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/stat_card_alert">
+
+                    <!-- Inner Glow for Alert -->
+                    <View
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_gravity="bottom|start"
+                        android:layout_marginBottom="-32dp"
+                        android:layout_marginStart="-32dp"
+                        android:background="@drawable/glow_alert" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="4dp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="SMISHING DETECTED"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/md_theme_secondary"
+                                android:letterSpacing="0.05"
+                                android:fontFamily="sans-serif-medium" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:src="@drawable/ic_warning_filled"
+                                android:tint="@color/md_theme_secondary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvThreats"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="48sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/md_theme_secondary"
+                            android:letterSpacing="-0.04"
+                            android:fontFamily="sans-serif-black"
+                            android:layout_marginBottom="4dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Potentially dangerous links blocked and isolated."
+                            android:textSize="14sp"
+                            android:textColor="@color/md_theme_on_surface_variant" />
+                    </LinearLayout>
+                </FrameLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Material 3 Dark Theme Colors -->
+    <color name="md_theme_primary">#a9c7ff</color>
+    <color name="md_theme_on_primary">#003063</color>
+    <color name="md_theme_primary_container">#1d63b8</color>
+    <color name="md_theme_on_primary_container">#d4e1ff</color>
+    <color name="md_theme_secondary">#ffb77a</color>
+    <color name="md_theme_on_secondary">#4c2700</color>
+    <color name="md_theme_secondary_container">#fa8d02</color>
+    <color name="md_theme_on_secondary_container">#5f3200</color>
+    <color name="md_theme_tertiary">#ffb689</color>
+    <color name="md_theme_on_tertiary">#512300</color>
+    <color name="md_theme_tertiary_container">#a04c00</color>
+    <color name="md_theme_on_tertiary_container">#ffdac5</color>
+    <color name="md_theme_error">#ffb4ab</color>
+    <color name="md_theme_on_error">#690005</color>
+    <color name="md_theme_error_container">#93000a</color>
+    <color name="md_theme_on_error_container">#ffdad6</color>
+    <color name="md_theme_background">#111319</color>
+    <color name="md_theme_on_background">#e1e2ea</color>
+    <color name="md_theme_surface">#111319</color>
+    <color name="md_theme_on_surface">#e1e2ea</color>
+    <color name="md_theme_surface_variant">#32353b</color>
+    <color name="md_theme_on_surface_variant">#c2c6d4</color>
+    <color name="md_theme_outline">#8c919d</color>
+    <color name="md_theme_outline_variant">#424752</color>
+    <color name="md_theme_surface_container">#1d2025</color>
+    <color name="md_theme_surface_container_low">#191c21</color>
+
+<!-- Effect colors -->
+<color name="glow_blue_primary">#4287f5</color>
+<color name="glow_orange_primary">#fd8f08</color>
+<color name="shadow_blue_tint">#2e3036</color>
+<color name="card_border_outline">#424752</color>
+</resources>

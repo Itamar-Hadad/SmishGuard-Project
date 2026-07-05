@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SmishGuard</string>
+    <string name="active_shield">Active Shield</string>
+    <string name="protection_status">PROTECTION STATUS</string>
+    <string name="protection_on">ON</string>
+    <string name="protection_off">OFF</string>
+    <string name="active_since">Active since %s</string>
+    <string name="total_sms_scanned">TOTAL SMS SCANNED</string>
+    <string name="smishing_detected">SMISHING DETECTED</string>
+    <string name="threats_blocked">Potentially dangerous links blocked and isolated</string>
+    <string name="scanning_description">System is scanning all incoming traffic in real-time</string>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Typography -->
+    <dimen name="text_headline_lg">32sp</dimen>
+    <dimen name="text_body_md">16sp</dimen>
+    <dimen name="text_label_caps">12sp</dimen>
+    <dimen name="text_stat_lg">48sp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="spacing_safe_margin">20dp</dimen>
+    <dimen name="spacing_top_padding">96dp</dimen>
+    <dimen name="spacing_bottom_padding">128dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">40dp</dimen>
+
+    <!-- Border Radius -->
+    <dimen name="radius_card">12dp</dimen>
+</resources>
