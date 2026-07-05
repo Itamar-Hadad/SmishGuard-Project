@@ -15,6 +15,7 @@
 
 
 *Final Degree Project · Computer Science, Afeka College of Engineering*
+
 *Itamar Hadad · Neta Elbaz · Advisor: Victor Taubkin*
 
 </div>
