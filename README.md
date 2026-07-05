@@ -150,6 +150,7 @@ cd app && ./gradlew assembleDebug
 - [`model/README.md`](model/README.md): dataset, feature engineering, training pipeline, results
 - [`backend/README.md`](backend/README.md): API reference, architecture, deployment
 - [`app/README.md`](app/README.md): Android app features, architecture, build & configuration
+- [`SmishGuard Project Book.pdf`](SmishGuard%20Project%20Book.pdf): the full final degree project report
 
 ---
 
