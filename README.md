@@ -12,7 +12,7 @@
 [![XGBoost](https://img.shields.io/badge/XGBoost-2.1-337AB7)](model)
 [![Sentence--BERT](https://img.shields.io/badge/Sentence--BERT-all--MiniLM--L6--v2-FFCA28)](model)
 [![Kotlin](https://img.shields.io/badge/Kotlin-Android-7F52FF?logo=kotlin&logoColor=white)](app)
-[![Deployed on Render](https://img.shields.io/badge/Deployed%20on-Render-46E3B7?logo=render&logoColor=white)](backend)
+
 
 *Final Degree Project · Computer Science, Afeka College of Engineering*
 *Itamar Hadad · Neta Elbaz · Advisor: Victor Taubkin*
